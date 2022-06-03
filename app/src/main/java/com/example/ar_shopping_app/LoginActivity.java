@@ -50,8 +50,7 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this,MainActivity.class);
-                startActivity(intent);
+                AttemptLogin();
             }
         });
 
@@ -61,8 +60,7 @@ public class LoginActivity extends AppCompatActivity {
     private void AttemptLogin() {
         String email = inputEmail.getEditText().getText().toString();
         String password = inputPassword.getEditText().getText().toString();
-       /* String email = "davfred777@gmail.com";
-        String password = "123456789"; */
+
 
         if(email.isEmpty() || !email.contains("@gmail"))
         {
